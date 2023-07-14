@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Forms - Labels and Validations</title>
+  </head>
+  <body>
+    <!--  You can specify the input type-->
+    <!--  Reference Links-->
+    <!-- http://www.w3schools.com/TAGs/att_input_type.asp -->
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input -->
+
+    <!--Actions: where we send the data -->
+    <!--Method: get/post HTTP method -->
+
+    <h1>Log In</h1>
+    <h2>Please Input your Password and Email</h2>
+
+    <!-- Two ways of using a Label-->
+    <!-- Nested -->
+    <!--  for and id connection-->
+
+    <form action="http://www.google.com" method="get">
+
+      <label>
+        <!-- label can be the same line with the input, unlike paragraph -->
+         EMAIL:
+         <input type="email" name="useremail" value="Email Here">
+      </label>
+
+
+      <label >
+        PASSWORD:
+      <input type="password" name="password" placeholder="Password">
+      </label>
+
+      <!-- Validation -->
+      <!--  Usually do a lot more validation with Backend-->
+      <!--  Use the attribute: required to require input-->
+
+      <label for="userinput">TEXT:</label>
+
+      <!-- id is the unique identifier for a html tag, can use to link the css later -->
+      <input type="text" id="userinput"name="input" placeholder="Enter Text Here" required>
+
+      <input type="submit" >
+
+    </form>
+
+
+  </body>
+</html>
