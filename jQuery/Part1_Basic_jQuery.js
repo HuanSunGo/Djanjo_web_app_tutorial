@@ -13,7 +13,7 @@ var x = $('h1');
 x.css("color",'red');
 x.css("background","blue");
 
-// Multiple CSS properties at once:
+// Multiple CSS properties in a js object at once:
 var newCSS = {
   "color":"white",
   "background":"blue",
