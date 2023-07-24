@@ -221,25 +221,25 @@ print 'Area is: ',c.area()
 
 class Animal():
     def __init__(self):
-        print "Animal created"
+        print ("Animal created")
 
     def whoAmI(self):
-        print "Animal"
+        print ("Animal")
 
     def eat(self):
-        print "Eating"
+        print ("Eating")
 
 
 class Dog(Animal):
     def __init__(self):
         Animal.__init__(self)
-        print "Dog created"
+        print ("Dog created")
 
     def whoAmI(self):
-        print "Dog"
+        print ("Dog")
 
     def bark(self):
-        print "Woof!"
+        print ("Woof!")
 
 d = Dog()
 d.whoAmI()
@@ -274,7 +274,7 @@ d.bark()
 
 class Book():
     def __init__(self, title, author, pages):
-        print "A book is created"
+        print ("A book is created")
         self.title = title
         self.author = author
         self.pages = pages
@@ -286,14 +286,15 @@ class Book():
         return self.pages
 
     def __del__(self):
-        print "A book is destroyed"
+        print ("A book is destroyed")
+
 
 book = Book("Python Rocks!", "Jose Portilla", 159)
 
 #Special Methods
-print book
-print len(book)
-del book
+print (book)
+print (len(book))
+del (book)
 
 
 #     The __init__(), __str__(), __len__() and the __del__() methods.

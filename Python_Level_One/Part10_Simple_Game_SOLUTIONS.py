@@ -27,7 +27,7 @@ def get_guess():
     '''
     Asks for the number guess and transforms the string to a list.
     '''
-    return list(input("What is your guess?"))
+    return list(input("What is your guess:"))
 
 def generate_code():
     '''

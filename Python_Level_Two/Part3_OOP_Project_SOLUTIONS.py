@@ -61,6 +61,7 @@ class Hand:
         return "Contains {} cards".format(len(self.cards))
 
     def add(self,added_cards):
+        # not using append because extend allows to add multiple at one time 
         self.cards.extend(added_cards)
 
     def remove_card(self):
@@ -84,12 +85,13 @@ class Player:
             return war_cards
         else:
             for x in range(3):
-                war_cards.append(self.hand.cards.pop())
+                war_cards.append(self.hand.remove_card())
             return war_cards
 
     def still_has_cards(self):
         """
-        Returns True if player still has cards
+        Returns True if player still has cards.
+        Because the player who run out of the card lose. 
         """
         return len(self.hand.cards) != 0
 
@@ -112,6 +114,7 @@ user = Player(name,Hand(half2))
 # Set Round Count
 total_rounds = 0
 war_count = 0
+
 # Let's play
 while user.still_has_cards() and comp.still_has_cards():
     total_rounds += 1

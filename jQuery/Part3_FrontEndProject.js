@@ -1,7 +1,7 @@
 // We need to use jQuery for the following:
 
 var player1 = prompt("Player One: Enter Your Name , you will be Blue");
-var player1Color = 'rgb(86, 151, 255)';
+var player1Color = 'rgb(86, 151, 255)'; // use rgb because the jquery need rgb to change color
 
 var player2 = prompt("Player Two: Enter Your Name, you will be Red");
 var player2Color = 'rgb(237, 45, 73)';
@@ -30,7 +30,7 @@ function checkBottom(colIndex) {
   var colorReport = returnColor(5,colIndex);
   for (var row = 5; row > -1; row--) {
     colorReport = returnColor(row,colIndex);
-    if (colorReport === 'rgb(128, 128, 128)') {
+    if (colorReport === 'rgb(128, 128, 128)') { // find the first available grey button
       return row
     }
   }
@@ -75,10 +75,12 @@ function verticalWinCheck() {
 function diagonalWinCheck() {
   for (var col = 0; col < 5; col++) {
     for (var row = 0; row < 7; row++) {
+      // check for the positive diaginal
       if (colorMatchCheck(returnColor(row,col), returnColor(row+1,col+1) ,returnColor(row+2,col+2), returnColor(row+3,col+3))) {
         console.log('diag');
         reportWin(row,col);
         return true;
+        // check for the negative diaginal 
       }else if (colorMatchCheck(returnColor(row,col), returnColor(row-1,col+1) ,returnColor(row-2,col+2), returnColor(row-3,col+3))) {
         console.log('diag');
         reportWin(row,col);
